@@ -1,0 +1,52 @@
+T0 = (short)(data[0] - 10);
+T1 = (short)(data[1] - 10);
+T2 = (short)data[2];
+T3 = (short)data[3];
+T4 = (short)data[4];
+T5 = (short)data[5];
+T6 = (short)data[6];
+
+if (BitConverter.IsLittleEndian) //System uses BigEndian, so convert
+{
+    byte[] dataBE = new byte[34];
+
+    for (int i = 0; i < 34; i += 2)
+    {
+        dataBE[i] = data[i + 1];
+        dataBE[i + 1] = data[i];
+    }
+
+    pumptime = BitConverter.ToInt16(dataBE, 10);
+    E_K = BitConverter.ToInt16(dataBE, 12);
+    E_accum_K = BitConverter.ToInt16(dataBE, 14);
+    E_accum_M = BitConverter.ToInt16(dataBE, 16);
+
+}
+else
+{
+    pumptime = BitConverter.ToInt16(data, 10);
+    E_K = BitConverter.ToInt16(data, 12);
+    E_accum_K = BitConverter.ToInt16(data, 14);
+    E_accum_M = BitConverter.ToInt16(data, 16);
+}
+
+
+pump1perc = (short)data[18];
+pump2perc = (short)data[19];
+
+P1 = (data[20] & 0x01) == 0x01;
+P2 = (data[20] & 0x02) == 0x02;
+P3 = (data[20] & 0x04) == 0x04;
+P4 = (data[20] & 0x08) == 0x08;
+H1 = (data[20] & 0x10) == 0x10;
+
+hand_port1 = (data[29] & 0x01) == 0x01;
+hand_port2 = (data[29] & 0x02) == 0x02;
+hand_port3 = (data[29] & 0x04) == 0x04;
+hand_port4 = (data[29] & 0x08) == 0x08;
+
+R1 = (data[30] & 0x01) == 0x01;
+R2 = (data[30] & 0x02) == 0x02;
+R3 = (data[30] & 0x04) == 0x04;
+R1_DSP = (data[30] & 0x08) == 0x08;
+R2_DSP = (data[30] & 0x10) == 0x10;
