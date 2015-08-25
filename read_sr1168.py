@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-#work in progress
+#!!!!!!!!!!!!!!!!!!! this is a work in progress - this script is broken.  Use the "stats" script.
 
 import serial
 from pprint import pprint
