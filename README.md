@@ -1,7 +1,8 @@
 sr1168 stats reader
 ============
 
-Reads stats from sr1168 solar thermal water controller via rs486 USB-serial device
+Reads stats from sr1168 solar thermal water controller via rs486 USB-serial device and sends them to StatsD
+
 
 
 http://www.ultisolar.com/SR1168.pdf
