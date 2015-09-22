@@ -79,7 +79,7 @@ status['8System Operation']         = byte & 0x128
 for i in range(20,34):
   print str(i) + ": " + str(ord(data[i]))
 
-#pprint(values)
+pprint(values)
 #pprint(sets)
 #pprint(status)
 
