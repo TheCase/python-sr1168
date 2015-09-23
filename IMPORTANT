@@ -1,0 +1,3 @@
+#add this to a file (ie. 50-my-usb.rules) in /etc/udev/rules.d
+
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", SYMLINK+="ttyUSB-sr1168"
