@@ -18,7 +18,7 @@ def stats_write ( arr ):
         print key + ': ' + str(val)
         statsd.gauge(key, val)
 
-ser = serial.Serial('/dev/ttyUSB0', 4800)
+ser = serial.Serial('/dev/ttyUSB-sr1168', 4800)
 
 #send request
 ser.write("\x01\x03\x00\x00\x00\x10\x14\x00")
