@@ -4,7 +4,7 @@ import serial
 from pprint import pprint
 
 from statsd import StatsClient
-statsd = StatsClient(host='stats',
+statsd = StatsClient(host='stats.311cub.net',
                      port=8125,
                      prefix='sr1168c')
 

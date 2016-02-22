@@ -16,7 +16,7 @@ def influx(measurement, item, value):
         }
     ]
 
-    client = InfluxDBClient('stats.311cub', 8086, 'root', 'root', 'sr1168')
+    client = InfluxDBClient('stats.311cub.net', 8086, 'root', 'root', 'sr1168')
     client.write_points(json_body)
 
 
