@@ -1,1 +1,1 @@
-*/1 * * * * /opt/python-rs1168/stats-sr1168.py 
+*/1 * * * * /opt/python-rs1168/influx-sr1168.py 
