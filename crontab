@@ -1,1 +1,1 @@
-*/1 * * * * /opt/sr1168c/stats-sr1168c.py 
+*/1 * * * * /opt/python-rs1168/stats-sr1168.py 
